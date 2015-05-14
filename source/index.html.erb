@@ -245,13 +245,15 @@ title: Ziel Group
   <div class="row">
       <div class="col-lg-8">
           <div class="boxed-grey">
-              <form id="contact-form">
+              <!-- <form id="contact-form"> -->
+              <form id="contact-form" action="https://getsimpleform.com/messages?form_api_token=6f3c790be0d3cbbf2d1abd39bdc16971" method="post">
+
               <div class="row">
                   <div class="col-md-6">
                       <div class="form-group">
                           <label for="name">
                               Nombre</label>
-                          <input type="text" class="form-control" id="name" placeholder="Nombre" required="required" />
+                          <input type='text' name='name' class="form-control" id="name" placeholder="Nombre" required="required"/>
                       </div>
                       <div class="form-group">
                           <label for="email">
@@ -259,18 +261,19 @@ title: Ziel Group
                           <div class="input-group">
                               <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                               </span>
-                              <input type="email" class="form-control" id="email" placeholder="nombre@nombre.com" required="required" /></div>
+                              <input type="email" name="email" class="form-control" id="email" placeholder="nombre@nombre.com" required="required"/>
+                          </div>
                       </div>
                       <div class="form-group">
                           <label for="subject">
                               Tema</label>
                           <select id="subject" name="subject" class="form-control" required="required">
-                              <option value="na" selected="">Escoja uno:</option>
-                              <option value="general">Contacto inicial</option>
-                              <option value="finance">Finanzas corporativas</option>
-                              <option value="projects">Estructuración de proyectos</option>
-                              <option value="family">Asesoría familiar</option>
-                              <option value="person">Coach financiero</option>
+                              <option value="no_subject" selected="">Escoja uno:</option>
+                              <option value="Initial_contact">Contacto inicial</option>
+                              <option value="Corporate_finance">Finanzas corporativas</option>
+                              <option value="project_structure">Estructuración de proyectos</option>
+                              <option value="family_office">Asesoría familiar</option>
+                              <option value="personal_coach">Coach financiero</option>
                           </select>
                       </div>
                   </div>
@@ -283,6 +286,8 @@ title: Ziel Group
                       </div>
                   </div>
                   <div class="col-md-12">
+										  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+										  <input type='hidden' name='redirect_to' value='http://www.naturaldelivery.co/sitio/?q=products' />
                       <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">
                           Enviar</button>
                   </div>
@@ -290,11 +295,24 @@ title: Ziel Group
               </form>
           </div>
       </div>
-	
+
+<!-- <form action="https://getsimpleform.com/messages?form_api_token=6f3c790be0d3cbbf2d1abd39bdc16971" method="post"> -->
+  <!-- all your input fields here.... -->
+
+                          
+<!-- 
+  <input type='text' name='test' />
+  <input type='submit' value='Test form' />
+</form>
+	 -->
+
+
+
+
+
 	<div class="col-lg-4">
 		<div class="widget-contact">
-			<h5>Oficina:</h5>
-			
+			<h5>Oficina:</h5>	
 			<address>
 			  <strong>Ziel Group.</strong><br>
 			  Medellín, Colombia
@@ -322,6 +340,8 @@ title: Ziel Group
 
 	</div>
 </section>
+
+
 <!-- /Section: contact -->
 
 <footer>
